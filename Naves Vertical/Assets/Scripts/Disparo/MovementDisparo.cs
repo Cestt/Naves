@@ -12,12 +12,16 @@ public class MovementDisparo : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Physics2D.IgnoreLayerCollision (8, 8);
 		thisGameobject = this.gameObject;
 		thisTransform = thisGameobject.transform;
 	}
 	
 	void Update(){
 		thisTransform.Translate(speed * Vector3.up * Time.deltaTime, Space.World);
+		if (thisTransform.position.y > 6 && thisGameobject.activeSelf == true) {
+			thisGameobject.SetActive (false);
+		}
 	}
 
 	void OnBecameInvisible() {

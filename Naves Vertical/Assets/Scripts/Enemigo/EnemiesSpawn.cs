@@ -21,6 +21,7 @@ public class EnemiesSpawn : MonoBehaviour {
 				if(tempGo.activeSelf == false){
 					tempGo.transform.position = new Vector2(Random.Range(-stageDimensions.x +0.1f,stageDimensions.x-0.1f),5.30f);
 					tempGo.SetActive(true);
+					tempGo.GetComponent<EnemyBehaviour> ().triggered = false;
 					break;
 				}
 			}

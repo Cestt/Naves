@@ -1,13 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Enemigo\EnemiesSpawn.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Nave\Movement.cs">
     <Files>
-      <File FileName="Assets\Scripts\Disparo\MovementDisparo.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Disparo\MovementDisparo.cs" Line="23" Column="37" />
       <File FileName="Assets\Scripts\Disparo\Pool.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Nave\Attack.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Nave\Movement.cs" Line="76" Column="4" />
+      <File FileName="Assets\Scripts\Nave\Movement.cs" Line="40" Column="5" />
       <File FileName="Assets\Scripts\Enemigo\MovementEnemigo.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Enemigo\EnemiesSpawn.cs" Line="22" Column="83" />
+      <File FileName="Assets\Scripts\Enemigo\EnemiesSpawn.cs" Line="24" Column="63" />
+      <File FileName="Assets\Scripts\Enemigo\EnemyBehaviour.cs" Line="24" Column="24" />
+      <File FileName="Assets\Scripts\ScoreManager.cs" Line="22" Column="13" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
