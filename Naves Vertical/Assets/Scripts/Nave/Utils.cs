@@ -22,4 +22,11 @@ public static class Utils {
 		angle += offset;
 		source.rotation =  Quaternion.Slerp (source.rotation, Quaternion.Euler (0, 0, angle), rotationSpeed * Time.deltaTime);
 	}
+	public static void LookAt2D(Transform source, Vector3 target,float min, float max, float offset = -90){
+		Vector3 dir = target - source.position;
+		float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+		angle += offset;
+		angle = Mathf.Clamp (angle, min, max);
+		source.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+	}
 }

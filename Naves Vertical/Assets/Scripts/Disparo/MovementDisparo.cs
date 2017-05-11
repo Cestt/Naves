@@ -18,7 +18,7 @@ public class MovementDisparo : MonoBehaviour {
 	}
 	
 	void Update(){
-		thisTransform.Translate(speed * Vector3.up * Time.deltaTime, Space.World);
+		thisTransform.position += speed * transform.up* Time.deltaTime ;
 		if (thisTransform.position.y > 6 && thisGameobject.activeSelf == true) {
 			thisGameobject.SetActive (false);
 		}
