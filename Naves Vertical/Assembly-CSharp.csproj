@@ -46,14 +46,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Buff\ShootBuffScript.cs" />
+     <Compile Include="Assets\Scripts\Buff\SpeedBuffScript.cs" />
      <Compile Include="Assets\Scripts\Disparo\MovementDisparo.cs" />
-     <Compile Include="Assets\Scripts\Disparo\Pool.cs" />
      <Compile Include="Assets\Scripts\Enemigo\EnemiesSpawn.cs" />
      <Compile Include="Assets\Scripts\Enemigo\EnemyBehaviour.cs" />
      <Compile Include="Assets\Scripts\Enemigo\MovementEnemigo.cs" />
      <Compile Include="Assets\Scripts\Nave\Attack.cs" />
      <Compile Include="Assets\Scripts\Nave\Movement.cs" />
      <Compile Include="Assets\Scripts\Nave\Utils.cs" />
+     <Compile Include="Assets\Scripts\Pool.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

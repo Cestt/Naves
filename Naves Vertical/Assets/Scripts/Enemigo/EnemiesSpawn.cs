@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemiesSpawn : MonoBehaviour {
 
 	public float Enemies1SpwanRate;
+	public float Enemies1SpawnRateReduction;
 	Vector3 stageDimensions;
 	List<GameObject> enemigos1;
 	// Use this for initialization
@@ -17,6 +18,8 @@ public class EnemiesSpawn : MonoBehaviour {
 	IEnumerator Spawn(){
 		while (true) {
 			yield return new WaitForSeconds (Enemies1SpwanRate);
+			if(Enemies1SpwanRate > 0.1f)
+				Enemies1SpwanRate -= Enemies1SpawnRateReduction;
 			foreach(GameObject tempGo in enemigos1){
 				if(tempGo.activeSelf == false){
 					tempGo.transform.position = new Vector2(Random.Range(-stageDimensions.x +0.1f,stageDimensions.x-0.1f),5.30f);

@@ -7,7 +7,13 @@ public class Movement : MonoBehaviour {
 
 	//Public variables
 	public float speed;
+	public float realSpeed;
+	[HideInInspector]
+	public float speedChange = 0;
 	public float shootingSpeed;
+	public float realShootingSpeed;
+	[HideInInspector]
+	public float shootingSpeedChange = 0;
 
 	//Optimization Variables
 	private Transform thisTransform;
@@ -35,10 +41,10 @@ public class Movement : MonoBehaviour {
 		if(Input.GetMouseButton(0)){
 			mousePosition = mCam.ScreenToWorldPoint (Input.mousePosition);
 			mousePosition = new Vector2 (mousePosition.x, mousePosition.y + 1);
-			thisGameobject.transform.position = Vector2.MoveTowards (thisTransform.position, mousePosition, speed);
+			thisGameobject.transform.position = Vector2.MoveTowards (thisTransform.position, mousePosition, speed + speedChange);
 			Utils.LookAt2D(thisTransform, new Vector3(mousePosition.x,mousePosition.y +0.8f,0),-22f,22f);
 			if(!IsInvoking("Disparar")){
-				InvokeRepeating("Disparar",0,shootingSpeed);
+				InvokeRepeating("Disparar",0,shootingSpeed - shootingSpeedChange);
 			}
 			
 		}
